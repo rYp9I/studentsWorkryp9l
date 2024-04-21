@@ -1,0 +1,286 @@
+/* название с картинкой и телефоном */
+.header-section {
+    position: relative;
+}
+.header-title {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.header-title{margin:10px auto;text-align:center;cursor: pointer}
+.header-title a{text-decoration:none;-webkit-transform:perspective(2.5em) rotateX(15deg) scaleY(0.8);-moz-transform:perspective(2.5em) rotateX(15deg) scaleY(0.8);-ms-transform:perspective(2.5em) rotateX(15deg) scaleY(0.8);-o-transform:perspective(2.5em) rotateX(15deg) scaleY(0.8);transform:perspective(2.5em) rotateX(15deg) scaleY(0.8);-webkit-transition:all .5s;-moz-transition:all .5s;transition:all .5s;display:inline-block;text-align:center;text-transform:uppercase;font-size:75px;font-weight:700;font-family:'Exo 2';line-height:.8;color:#492afb;text-shadow:0 -1px 15px rgba(0,0,0,0.9),0 1px 0 #7f6303,0 3px 0 #846703,0 5px 0 #896b03,0 7px 0 #8e6f03,0 9px 0 #937203,0 6px 50px rgba(252,223,92,0.8)}
+.header-title a:first-line{font-size:6rem}
+.header-title a:hover{-webkit-transform:perspective(8em) rotateX(11deg) scale(1.2);-moz-transform:perspective(8em) rotateX(11deg) scale(1.2);-ms-transform:perspective(8em) rotateX(11deg) scale(1.2);-o-transform:perspective(8em) rotateX(11deg) scale(1.2);transform:perspective(8em) rotateX(11deg) scale(1.2);text-shadow:0 -1px 15px black,0 1px 0 #7f6303,0 2px 0 #846703,0 0 0 #896b03,0 1px 0 #8e6f03,0 2px 0 #937203,0 2px 30px rgba(252,223,92,0.6)}
+
+.header-phone {
+    position: absolute;
+    bottom: 20px;
+    color: blue;
+    font-size: 1.5rem;
+    animation: move 8s;
+    -webkit-animation: move 15s;
+}
+
+  
+  @keyframes move {
+    from {
+    margin-left: 80%;
+    width: 80%;  
+    }
+  
+    to {
+    margin-left: 0%;
+    width: 80%;
+    }
+  }
+     
+  @-webkit-keyframes move {
+    from {
+    margin-left: 80%;
+    width: 80%;  
+    }
+  
+    to {
+    margin-left: 0%;
+    width: 80%;
+    }
+  }
+  /* блюда с тексом */
+  .specials-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: auto;
+    gap: 20px;
+  }
+ .specials-section{
+    text-align: center;
+ }
+ p {
+    font-style: oblique;
+ }
+ h2{
+    font-weight: bold;
+    text-align: center;
+ }
+ hr{
+    width: 40px;
+    height: 5px;
+    border: 0;
+    background-color: rgb(255, 0, 0);
+ }
+ /* фото с текстом справа */
+ .story-section{
+   display: flex; 
+   flex-direction: row;
+   gap: 50px;
+   align-items: center;
+   width: 1200px;
+ }
+ .story-image{
+   width: 700px;
+   margin-left: 100px;
+ }
+ .story-text {
+   width: auto;
+   text-align: center;
+}
+/* меню */
+.menu-wrapper{
+   margin-bottom: 40px;
+   background-color:#bbb;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 40px;
+}
+h3{
+   text-align: center;
+font-family: 'Indie Flower', cursive;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Satisfy', cursive;
+}
+
+* {box-sizing:border-box}
+
+/* карусель */
+.slideshow-container {
+   max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* фото с текстом слева */
+.cheef-section{
+   margin-top: 40px;
+   display: flex; 
+   flex-direction: row;
+   gap: 50px;
+   align-items: center;
+   width: 1200px;
+}
+.chef-image{
+   width: 500px;
+  margin-right: 40px;
+ }
+ .description {
+   width: auto;
+   text-align: center;
+   margin-left: 100px;
+}
+/* info */
+.contact-section{
+   background-color: #717171;
+}
+.contacts-block{
+   margin-top: 40px;
+   display: flex;
+   grid-template-rows: 1fr 1fr 1fr;
+   justify-content: space-around;
+   flex-wrap: wrap;
+}
+.contact-form{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 20px;
+}
+.footer-content{
+   
+   background-color: #bbb;
+   text-align: center;
+}
+ .btn {
+      background: #f0f0f0;
+      background-image: -webkit-linear-gradient(top, #f0f0f0, #f7f9fa);
+      background-image: -moz-linear-gradient(top, #f0f0f0, #f7f9fa);
+      background-image: -ms-linear-gradient(top, #f0f0f0, #f7f9fa);
+      background-image: -o-linear-gradient(top, #f0f0f0, #f7f9fa);
+      background-image: linear-gradient(to bottom, #f0f0f0, #f7f9fa);
+      -webkit-border-radius: 28;
+      -moz-border-radius: 28;
+      border-radius: 28px;
+      font-family: Arial;
+      color: #050505;
+      font-size: 20px;
+      padding: 10px 20px 10px 20px;
+      text-decoration: none;
+    }
+    
+    .btn:hover {
+      background: #3cb0fd;
+      background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+      background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+      background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+      background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+      background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+      text-decoration: none;
+    }
+    @media (max-width:900px) {
+      .specials-wrapper{
+         display: flex;
+         flex-wrap: wrap;
+       }
+       .story-section{
+         display: flex; 
+         flex-wrap: wrap;
+         align-items: center;
+         width: auto;
+       }
+       .story-image{
+         width: 500px;
+         margin-left: 10px;
+       }
+       .cheef-section{
+         margin-top: 40px;
+         flex-wrap: wrap;
+         align-items: center;
+         width: auto;
+      }
+    }
